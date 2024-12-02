@@ -177,7 +177,7 @@ export default function renderer(options: RendererOptions = {}): VitePlugin {
   const moduleCache = new Map<string, string>()
 
   return {
-    name: 'vite-plugin-electron-renderer',
+    name: 'vite-plugin-electron-renderer-support-old-electron-version',
     async config(config, { command }) {
       // https://github.com/vitejs/vite/blob/v4.2.1/packages/vite/src/node/config.ts#L469-L472
       root = normalizePath(config.root ? path.resolve(config.root) : cwd)

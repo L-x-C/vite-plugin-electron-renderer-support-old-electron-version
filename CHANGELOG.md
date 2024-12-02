@@ -160,7 +160,7 @@ export interface RendererOptions {
 **Here is an example using serialport**
 
 ```js
-import renderer from 'vite-plugin-electron-renderer'
+import renderer from 'vite-plugin-electron-renderer-support-old-electron-version'
 
 export default {
   plugins: [
