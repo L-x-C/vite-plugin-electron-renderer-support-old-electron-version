@@ -64,6 +64,7 @@ const electronMainApis: {
     { name: 'session', evns: ['Main'] },
     { name: 'ShareMenu', evns: ['Main'] },
     { name: 'shell', evns: ['Main', 'Renderer'] },
+    { name: 'remote', evns: ['Main', 'Renderer'] },
     { name: 'systemPreferences', evns: ['Main', 'Utility'] },
     { name: 'TouchBar', evns: ['Main'] },
     { name: 'Tray', evns: ['Main'] },
@@ -136,6 +137,7 @@ export const crashReporter = electron.crashReporter;
 export const ipcRenderer = _ipcRenderer;
 export const nativeImage = electron.nativeImage;
 export const shell = electron.shell;
+export const remote = electron.remote;
 export const webFrame = electron.webFrame;
 export const deprecate = electron.deprecate;
 
