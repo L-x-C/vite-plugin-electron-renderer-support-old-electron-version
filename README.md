@@ -2,15 +2,15 @@
   <img width="170" src="https://github.com/electron-vite/vite-plugin-electron/blob/main/logo.svg?raw=true">
 </p>
 <div align="center">
-  <h1>vite-plugin-electron-renderer</h1>
+  <h1>vite-plugin-electron-renderer-support-old-electron-version</h1>
 </div>
 <p align="center">Support use Node.js API in Electron-Renderer</p>
 <p align="center">
-  <a href="https://npmjs.com/package/vite-plugin-electron-renderer">
-    <img src="https://img.shields.io/npm/v/vite-plugin-electron-renderer.svg">
+  <a href="https://npmjs.com/package/vite-plugin-electron-renderer-support-old-electron-version">
+    <img src="https://img.shields.io/npm/v/vite-plugin-electron-renderer-support-old-electron-version.svg">
   </a>
-  <a href="https://npmjs.com/package/vite-plugin-electron-renderer">
-    <img src="https://img.shields.io/npm/dm/vite-plugin-electron-renderer.svg">
+  <a href="https://npmjs.com/package/vite-plugin-electron-renderer-support-old-electron-version">
+    <img src="https://img.shields.io/npm/dm/vite-plugin-electron-renderer-support-old-electron-version.svg">
   </a>
   <a href="https://discord.gg/YfjFuEgVUR">
     <img src="https://img.shields.io/badge/chat-discord-blue?logo=discord">
@@ -20,18 +20,20 @@
   <strong>
     <span>English</span>
     |
-    <a href="https://github.com/electron-vite/vite-plugin-electron-renderer/blob/main/README.zh-CN.md">简体中文</a>
+    <a href="https://github.com/electron-vite/vite-plugin-electron-renderer-support-old-electron-version/blob/main/README.zh-CN.md">简体中文</a>
   </strong>
 </p>
 
 <br/>
 
-In short, `vite-plugin-electron-renderer` is responsible for polyfilling Electron, Node.js built-in modules.
+In short, `vite-plugin-electron-renderer-support-old-electron-version` is responsible for polyfilling Electron, Node.js built-in modules.
+
+and support 'remote' in old electron version.
 
 ## Install
 
 ```sh
-npm i vite-plugin-electron-renderer -D
+npm i vite-plugin-electron-renderer-support-old-electron-version -D
 ```
 
 ## Usage
@@ -39,7 +41,7 @@ npm i vite-plugin-electron-renderer -D
 1. This just modifies some of Vite's default config to make the Renderer process works.
 
 ```js
-import renderer from 'vite-plugin-electron-renderer'
+import renderer from 'vite-plugin-electron-renderer-support-old-electron-version'
 
 export default {
   plugins: [
@@ -51,7 +53,7 @@ export default {
 2. Using the third-part `C/C++`, `esm` package in the Renderer process.
 
 ```js
-import renderer from 'vite-plugin-electron-renderer'
+import renderer from 'vite-plugin-electron-renderer-support-old-electron-version'
 
 export default {
   plugins: [
@@ -96,9 +98,9 @@ export interface RendererOptions {
 }
 ```
 
-## [Examples](https://github.com/electron-vite/vite-plugin-electron-renderer/tree/main/examples)
+## [Examples](https://github.com/electron-vite/vite-plugin-electron-renderer-support-old-electron-version/tree/main/examples)
 
-- [quick-start](https://github.com/electron-vite/vite-plugin-electron-renderer/tree/main/examples/quick-start)
+- [quick-start](https://github.com/electron-vite/vite-plugin-electron-renderer-support-old-electron-version/tree/main/examples/quick-start)
 
 ## How to work
 
@@ -151,7 +153,7 @@ const { ipcRenderer } = require('electron')
 <!-- When a module detected as a `cjs` module. it will be pre-bundle like the following. -->
 
 ```js
-// 👉 https://github.com/electron-vite/vite-plugin-electron-renderer/blob/v0.13.0/src/optimizer.ts#L139-L142
+// 👉 https://github.com/electron-vite/vite-plugin-electron-renderer-support-old-electron-version/blob/v0.13.0/src/optimizer.ts#L139-L142
 const _M_ = require("serialport");
 
 export default (_M_.default || _M_);
@@ -161,7 +163,7 @@ export const SerialPort = _M_.SerialPort;
 
 <!--
 **By the way**. If an npm package is a pure ESM format package, and the packages it depends on are also in ESM format, then put it in `optimizeDeps.exclude` and it will work normally.  
-[See the explanation](https://github.com/electron-vite/vite-plugin-electron-renderer/blob/v0.10.3/examples/quick-start/vite.config.ts#L33-L36)
+[See the explanation](https://github.com/electron-vite/vite-plugin-electron-renderer-support-old-electron-version/blob/v0.10.3/examples/quick-start/vite.config.ts#L33-L36)
 -->
 
 ## dependencies vs devDependencies
